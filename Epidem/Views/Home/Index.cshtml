@@ -1,51 +1,56 @@
 ﻿<div id="fullpage">
-    <div class="section carousel1" id="section0" >
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img class="biglogo-img img-responsive" src="/images/biglogo.png" alt="Logo">
-                <div class="container">
-                    <div class="carousel-caption">
-
-                    </div>
-                </div>
-            </div>
-            <h1 class="carousel-inner text-uppercase">Система мониторинга эпидемиологических характеристик</h1>
-        </div>
+    <div class="section" id="section0">
+        <img class="biglogo-img img-responsive center-block" src="/images/biglogo.png" alt="Logo">
+        <h1 class="text-uppercase">Система мониторинга эпидемиологических характеристик</h1>
     </div>
-    <div class="row block-margin section" id="section1">
+    <div class="row  section" id="section1">
         <div class="col-md-7">
             <h2 class=" blue h2-features">Интерактивная карта </h2>
             <p class="lead blue p-features">Предоставляет развёрнутую статистическую информацию по 7 нозологиям, включая сортировку информации о распространённости определённых заболеваний в регионах Российской Федерации.</p>
             <p><a class="btn blue-button my-button" href="#" role="button">Перейти</a></p>
         </div>
-        <div class="col-md-5 hidden-xs">
-            <img class="img-responsive center-block" src="/images/world.png" alt="Generic placeholder image">
+        <div class="col-md-5 ">
+            <img class="img-responsive center-block picture-block-main" src="/images/world.png" alt="Generic placeholder image">
         </div>
     </div>
-    <div class="row block-margin section" id="section2">
+    <div class="row  section" id="section2">
         <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading purple h2-features">Медицинский опросник </h2>
+            <h2 class=" purple h2-features">Медицинский опросник </h2>
             <p class="lead purple p-features">Пожалуйста, заполните Ваши персональные данные и пройдите медицинский опрос по 7 нозологиям. Уверяем, это не займёт много времени!</p>
             <p><a class="btn btn purple-button my-button" href="#" role="button">Перейти</a></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="img-responsive center-block hidden-xs" src="/images/opros.png" alt="Generic placeholder image">
+            <img class="img-responsive center-block  picture-block-main" src="/images/opros.png" alt="Generic placeholder image">
         </div>
     </div>
-    <div class="row block-margin section" id="section3">
+    <div class="row  section" id="section3">
         <div class="col-md-7 ">
-            <h2 class="featurette-heading pink h2-features">Анализ данных </h2>
+            <h2 class=" pink h2-features">Анализ данных </h2>
             <p class="lead pink p-features">Предоставляет пользователю статистическую информацию, отображённую в виде подробных графиков и диаграмм, составленных на основе обработанных анкетных данных.</p>
             <p><a class="btn pink-button my-button" href="#" role="button">Перейти</a></p>
         </div>
         <div class="col-md-5">
-            <img class="img-responsive center-block hidden-xs" src="/images/diag.png" alt="Generic placeholder image">
+            <img class="img-responsive center-block  picture-block-main" src="/images/diag.png" alt="Generic placeholder image">
         </div>
     </div>
 </div>
 
 @section Scripts
 {
-    <script type="text/javascript">        $(document).ready(function() {            $('#fullpage').fullpage({                css3: true,                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],                navigationPosition: 'right'            });        });    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                css3: true,
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Добро пожаловать!', 'Интерактивная карта', 'Опрос', 'Анализ'],
+                responsiveWidth: 900,
+                responsiveHeight: 600,
+                afterResponsive: function(isResponsive){
+                }
+            });
+        });
+    </script>
     <script type="text/javascript" src="/js/jquery.fullPage.js"></script>
 }
