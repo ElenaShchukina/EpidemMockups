@@ -35,5 +35,10 @@ namespace Epidem.Controllers
         {
             return View();
         }
+
+        public IActionResult Diagrams()
+        {
+            return View();
+        }
     }
 }
