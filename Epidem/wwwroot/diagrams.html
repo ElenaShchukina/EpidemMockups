@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epidem</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/site.css" />
+    <link rel="icon" href="/images/smalllogo.png">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            // Define the chart to be drawn.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Element');
+            data.addColumn('number', 'Percentage');
+            data.addRows([
+                ['First tile', 0.2],
+                ['Second tile', 0.2],
+                ['Third tile', 0.2],
+                ['Fourth tile', 0.2],
+                ['Fifth tile', 0.2]
+            ]);
+            var options = {
+                'width': 800,
+                'height': 800,
+                slices: {
+                    0: { color: '#B664CA' },
+                    1: { color: '#753234' },
+                    2: { color: '#5C9AD8' },
+                    3: { color: '#5C9B96' },
+                    4: { color: '#740D67' }
+                }
+            };
+            // Instantiate and draw the chart.
+            var chart = new google.visualization.PieChart(document.getElementById('myPieChart'));
+            chart.draw(data, options);
+            
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top header-color ">
+        <div class="container container-header">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand navbar-brand-logo">
+                    <img src="./images/smalllogo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-pencil2"></span> Опрос
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-planet"></span> Карта
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-pie-chart"></span> Диаграммы
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-key"></span> Вход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        <!--Page content start-->
+    <p class="login-header text-center">Диаграммы</p>
+    <div class="row" id="diagrams">
+    <div class="col-sm-7" >
+        <div id="myPieChart"></div>
+    </div>
+
+    <div class="col-sm-5 ">
+    <form>
+    <div class="panel panel-default diagram-wrapper center-block">
+    <h3>Параметры выборки:</h3>
+    <div class="diagram">
+        <h4>Тип диаграммы:</h4>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="r1"> Круговая
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="r1"> Столбцовая
+            </label>
+        </div>
+    </div>
+    <div class="diagram">
+        <h5>Нозология:</h5>
+        <select>
+            <option value="0" selected>Все варианты</option>  
+            <option value="1">Ревматоидный артрит</option>  
+            <option value="2">Болезни глаз</option>  
+            <option value="3">Аритмия</option>  
+            <option value="4">Артериальная гипертензия</option>  
+            <option value="5">Болезни органов дыхания</option>  
+            <option value="6">Болезни почек</option>  
+            <option value="7">Сколиоз   </option>  
+        </select>
+    </div>
+    <div class="diagram">
+        <h5>Место проживания:</h5>
+        <select required>
+            <option  value="">Выберите...</option>
+            <option value="1">Алтайский край</option>
+            <option value="10">Амурская область</option>
+            <option value="11">Архангельская область</option>
+            <option value="12">Астраханская область</option>
+            <option value="14">Белгородская область</option>
+            <option value="15">Брянская область</option>
+            <option value="17">Владимирская область</option>
+            <option value="18">Волгоградская область</option>
+            <option value="19">Вологодская область</option>
+            <option value="20">Воронежская область</option>
+            <option value="99">Еврейская автономная область</option>
+            <option value="76">Забайкальский край</option>
+            <option value="24">Ивановская область</option>
+            <option value="25">Иркутская область</option>
+            <option value="83">Кабардино-Балкарская Республика</option>
+            <option value="27">Калининградская область</option>
+            <option value="29">Калужская область</option>
+            <option value="30">Камчатский край</option>
+            <option value="91">Карачаево-Черкесская Республика</option>
+            <option value="32">Кемеровская область</option>
+            <option value="33">Кировская область</option>
+            <option value="34">Костромская область</option>
+            <option value="3">Краснодарский край</option>
+            <option value="4">Красноярский край</option>
+            <option value="37">Курганская область</option>
+            <option value="38">	Курская область</option>
+            <option value="41">Ленинградская область</option>
+            <option value="42">Липецкая область</option>
+            <option value="44">Магаданская область</option>
+            <option value="46">Московская область</option>
+            <option value="47">Мурманская область</option>
+            <option value="111">Ненецкий автономный округ</option>
+            <option value="22">Нижегородская область</option>
+            <option value="49">Новгородская область</option>
+            <option value="50">Новосибирская область</option>
+            <option value="52">Омская область</option>
+            <option value="53">Оренбургская область</option>
+            <option value="54">Орловская область</option>
+            <option value="56">Пензенская область</option>
+            <option value="57">Пермский край</option>
+            <option value="5">Приморский край</option>
+            <option value="58">Псковская область</option>
+            <option value="79">Республика Адыгея (Адыгея)</option>
+            <option value="84">Республика Алтай</option>
+            <option value="80">Республика Башкортостан</option>
+            <option value="81">Республика Бурятия</option>
+            <option value="82">Республика Дагестан</option>
+            <option value="26">Республика Ингушетия</option>
+            <option value="85">Республика Калмыкия</option>
+            <option value="86">Республика Карелия</option>
+            <option value="87">Республика Коми</option>
+            <option value="35">Республика Крым</option>
+            <option value="88">Республика Марий Эл</option>
+            <option value="89">Республика Мордовия</option>
+            <option value="98">Республика Саха (Якутия)</option>
+            <option value="90">Республика Северная Осетия-Алания</option>
+            <option value="92">Республика Татарстан (Татарстан)</option>
+            <option value="93">Республика Тыва</option>
+            <option value="95">Республика Хакасия</option>
+            <option value="60">Ростовская область</option>
+            <option value="61">Рязанская область</option>
+            <option value="36">Самарская область</option>
+            <option value="63">Саратовская область</option>
+            <option value="64">Сахалинская область</option>
+            <option value="65">Свердловская область</option>
+            <option value="66">Смоленская область</option>
+            <option value="7">Ставропольский край</option>
+            <option value="68">	Тамбовская область</option>
+            <option value="28">Тверская область</option>
+            <option value="69">Томская область</option>
+            <option value="70">Тульская область</option>
+            <option value="71">Тюменская область</option>
+            <option value="94">Удмуртская Республика</option>
+            <option value="73">Ульяновская область</option>
+            <option value="8">Хабаровский край</option>
+            <option value="71131">Ханты-мансийский автономный округ</option>
+            <option value="75">Челябинская область</option>
+            <option value="96">Чеченская Республика</option>
+            <option value="97">Чувашская Республика - Чувашия</option>
+            <option value="77">Чукотский автономный округ</option>
+            <option value="71140">Ямало-ненецкий автономный округ</option>
+            <option value="78">Ярославская область</option>    						
+        </select>
+    </div>
+    <div class="diagram">
+        <h5>Пол:</h5>
+
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="r2"> Мужской
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="r2"> Женский
+            </label>
+        </div>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="r2"> Оба варианта
+            </label>
+        </div>
+    </div>
+    <div class="diagram">
+        <h5>Рост, сантиметры:</h5>
+        <select>
+            <option value="all" selected>Все варианты</option>   
+            <option value='0'>ниже 140 см</option>
+            <option value='1'>140-145 см</option>
+            <option value='2'>146-150 см</option>
+            <option value='3'>151-155 см</option>
+            <option value='4'>156-160 см</option>
+            <option value='5'>161-165 см</option>
+            <option value='6'>166-170 см</option>
+            <option value='7'>171-175 см</option>
+            <option value="8">176-180 см</option>
+            <option value='9'>181-185 см</option>
+            <option value='10'>186-190 см</option>
+            <option value='11'>выше 190 см</option>   							
+        </select>
+    </div>
+    <div class="diagram">
+        <h5>Вес, килограммы:</h5>
+        <select>
+            <option value="all" selected>Все варианты</option>  
+            <option value='0'>меньше 30 кг</option>
+            <option value='1'>30-35 кг</option>
+            <option value='2'>36-40 кг</option>
+            <option value='3'>41-45 кг</option>
+            <option value='4'>46-50 кг</option>
+            <option value='5'>51-55 кг</option>
+            <option value='6'>56-60 кг</option>
+            <option value='7'>61-65 кг</option>
+            <option value='8'>66-70 кг</option>
+            <option value='9'>71-75 кг</option>
+            <option value='10'>76-80 кг</option>
+            <option value='11'>81-85 кг</option>
+            <option value='12'>86-90 кг</option>
+            <option value='13'>больше 90 кг</option>
+        </select>
+    </div>
+    <div class="diagram">
+        <h5>Возраст, года:</h5>
+        <select>
+            <option value="all" selected>Все варианты</option>
+            <option value="0">15-25</option>
+            <option value="1">26-35</option>
+            <option value="2">36-45</option>
+            <option value="3">46-55</option>
+            <option value="4">56-65</option>
+            <option value="5">66-75</option>
+            <option value="7">76-85</option>
+            <option value="8">старше 85</option>
+        </select>
+    </div>
+    <div class="diagram">
+        <h5>Социальное положение:</h5>
+        <select>
+            <option value="all" selected>Все варианты</option>
+            <option value="0">Учащийся школы</option>
+            <option value="1">Студент</option>
+            <option value="2">Неработающий</option>
+            <option value="3">Безработный</option>
+            <option value="4">Работающий</option>
+            <option value="5">Пенсионер</option>
+        </select>
+    </div>
+    <div class="diagram">
+        <h5>Употребление табачных изделий:</h5>
+        <div class="radio-inline">
+            <label>
+                <input type="radio" name="r3"> Да
+            </label>
+        </div>
+        <div class="radio-inline" >
+            <label>
+                <input type="radio" name="r3"> Нет
+            </label>
+        </div>
+        <div class="radio-inline" >
+            <label>
+                <input type="radio" name="r3"> Оба варианта
+            </label>
+        </div>
+    </div>
+
+    </div>
+    </form>
+    </div>
+    </div>
+
+        <!--Page content end-->
+        <hr />
+        <footer>
+            <p>&copy; 2017 - Epidem</p>
+        </footer>
+    </div>
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/js/site.js"></script>
+</body>
+</html>
