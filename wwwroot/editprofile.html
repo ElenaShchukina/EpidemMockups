@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epidem</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link rel="stylesheet" href="./css/site.css" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top header-color ">
+        <div class="container container-header">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand navbar-brand-logo">
+                    <img src="./images/smalllogo.png" alt="Logo" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-pencil2"></span> Опрос
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-planet"></span> Карта
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-pie-chart"></span> Диаграммы
+                        </a>
+                    </li>
+                    <li>
+                        <a class="white" href="#">
+                            <span class="icon-key"></span> Вход
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+     <p class="login-header text-center">Редактирование профиля</p>
+        <hr>
+            <form class="form-inline">
+                <div class="panel panel-default registration-wrapper">
+                <div class="panel-body ">
+                    <div class="form-group">
+                        <label class="edit-p">Телефон:</label>
+                        <input type="text" class="form-control edit-form" placeholder="Введите Ваше новый телефон">
+                        <button type="button" class="btn btn-default edit-button">Изменить</button>
+                    </div><br>
+                    <div class="form-group">
+                        <label class="edit-p"">E-mail:</label>
+                        <input type="email" class="form-control edit-form" placeholder="Введите Ваш новый e-mail">
+                        <button type="button" class="btn btn-default edit-button">Изменить</button>
+                    </div>
+                        <hr>
+                            <div>
+                                 <p class="hrlabel">Пароль</p>
+                                     <div class="form-group">
+                                        <label class="edit-p"">Старый пароль:</label>
+                                        <input type="password" class="form-control edit-form" placeholder="Введите Ваш старый пароль">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="edit-p"">Новый пароль:</label>
+                                        <input type="password" class="form-control edit-form" placeholder="Введите Ваш новый пароль">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="edit-p"">Подтвердить:</label>
+                                        <input type="password" class="form-control edit-form" placeholder="Подтвердите Ваш новый пароль">
+                                    </div>
+                                <p class="but"><button type="button" class="btn btn-default edit1-button">Изменить</button></p>
+                            </div>
+                </div>
+                </div>
+            </form>
+</div>
+<hr />
+<footer>
+      <p>&copy; 2017 - Epidem</p>
+</footer>
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/js/site.js"></script>
+</body>
+</html>
